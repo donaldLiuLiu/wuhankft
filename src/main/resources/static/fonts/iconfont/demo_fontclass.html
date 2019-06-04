@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IconFont</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="iconfont.css">
+</head>
+<body>
+    <div class="main markdown">
+        <h1>IconFont 图标</h1>
+        <ul class="icon_lists clear">
+            
+                <li>
+                <i class="icon iconfont icon-shouye"></i>
+                    <div class="name">首页</div>
+                    <div class="fontclass">.icon-shouye</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zuoji"></i>
+                    <div class="name">座机</div>
+                    <div class="fontclass">.icon-zuoji</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-iconset0339"></i>
+                    <div class="name">下载</div>
+                    <div class="fontclass">.icon-iconset0339</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-dianhua"></i>
+                    <div class="name">电话</div>
+                    <div class="fontclass">.icon-dianhua</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-chaxun"></i>
+                    <div class="name">查询</div>
+                    <div class="fontclass">.icon-chaxun</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-renmai"></i>
+                    <div class="name">人脉</div>
+                    <div class="fontclass">.icon-renmai</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-shouye-1"></i>
+                    <div class="name">首页</div>
+                    <div class="fontclass">.icon-shouye-1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-4"></i>
+                    <div class="name">人</div>
+                    <div class="fontclass">.icon-4</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-chaxun1"></i>
+                    <div class="name">查询</div>
+                    <div class="fontclass">.icon-chaxun1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zitigui"></i>
+                    <div class="name">04自提柜</div>
+                    <div class="fontclass">.icon-zitigui</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zitigui-xianxing"></i>
+                    <div class="name">04自提柜-线性</div>
+                    <div class="fontclass">.icon-zitigui-xianxing</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-woshou"></i>
+                    <div class="name">握手</div>
+                    <div class="fontclass">.icon-woshou</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-weibiaoti-"></i>
+                    <div class="name">电话</div>
+                    <div class="fontclass">.icon-weibiaoti-</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-sousuo"></i>
+                    <div class="name">查询</div>
+                    <div class="fontclass">.icon-sousuo</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-noun__cc"></i>
+                    <div class="name">笔记本</div>
+                    <div class="fontclass">.icon-noun__cc</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-zhinengshouhuani"></i>
+                    <div class="name">智能手环</div>
+                    <div class="fontclass">.icon-zhinengshouhuani</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-pos"></i>
+                    <div class="name">pos机</div>
+                    <div class="fontclass">.icon-pos</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont icon-xiazai"></i>
+                    <div class="name">下载 (1)</div>
+                    <div class="fontclass">.icon-xiazai</div>
+                </li>
+            
+        </ul>
+
+        <h2 id="font-class-">font-class引用</h2>
+        <hr>
+
+        <p>font-class是unicode使用方式的一种变种，主要是解决unicode书写不直观，语意不明确的问题。</p>
+        <p>与unicode使用方式相比，具有如下特点：</p>
+        <ul>
+        <li>兼容性良好，支持ie8+，及所有现代浏览器。</li>
+        <li>相比于unicode语意明确，书写更直观。可以很容易分辨这个icon是什么。</li>
+        <li>因为使用class来定义图标，所以当要替换图标时，只需要修改class里面的unicode引用。</li>
+        <li>不过因为本质上还是使用的字体，所以多色图标还是不支持的。</li>
+        </ul>
+        <p>使用步骤如下：</p>
+        <h3 id="-fontclass-">第一步：引入项目下面生成的fontclass代码：</h3>
+
+
+        <pre><code class="lang-js hljs javascript"><span class="hljs-comment">&lt;link rel="stylesheet" type="text/css" href="./iconfont.css"&gt;</span></code></pre>
+        <h3 id="-">第二步：挑选相应图标并获取类名，应用于页面：</h3>
+        <pre><code class="lang-css hljs">&lt;<span class="hljs-selector-tag">i</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">iconfont</span> <span class="hljs-selector-tag">icon-xxx</span>"&gt;&lt;/<span class="hljs-selector-tag">i</span>&gt;</code></pre>
+        <blockquote>
+        <p>"iconfont"是你项目下的font-family。可以通过编辑项目查看，默认是"iconfont"。</p>
+        </blockquote>
+    </div>
+</body>
+</html>

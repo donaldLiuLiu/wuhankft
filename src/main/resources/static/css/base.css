@@ -1,0 +1,76 @@
+/*css初始化*/
+
+/* body设置字体 背景 文本颜色*/
+body {
+    font: normal normal 14px "宋体";
+    color: #4c4c4c;
+    background-color: #ffffff;
+}
+
+/*覆盖bootstrap 对a标签的样式设置*/
+a {
+    color: #4c4c4c;
+    text-decoration: none;
+}
+a:active,
+a:hover,
+a:focus {
+    color: #4c4c4c;
+    text-decoration: none;
+}
+
+/*清除浮动*/
+.clearfix::after {
+    content: "";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+/*清除浮动：兼容IE6*/
+.clearfix{
+    zoom: 1;
+}
+
+/*ul清除前面的符号*/
+ul {
+    list-style: none;
+}
+
+/*p元素的margin padding*/
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*inner-blick样式*/
+.to_inner_display {
+    display: inline-block;
+}
+
+/*margin-left : 10*/
+.margin_left_10 {
+    margin-left: 10px;
+}
+
+.margin_top_20 {
+    margin-top: 20px;
+}
+
+.margin_top_50 {
+    margin-top: 50px;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.color_cll {
+	color: #fe7300;
+}

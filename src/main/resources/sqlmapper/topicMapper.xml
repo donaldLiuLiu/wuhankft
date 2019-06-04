@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kafutong.wuhankft.dao.ITopicMapper">
+	
+	<select id="getTopics" parameterType="Topic" resultType="Topic">
+		select id, topic_type, topic, topic_content, topic_imgpath, topic_date, topic_click, topic_url
+		from kft_infos
+		<where>
+			<if test="topic_type != null and topic_type != ''">and topic_type = #{topic_type}</if>
+		</where>
+		order by topic_date desc
+		limit
+		<choose>
+			<when test="from != null and from != ''">
+				#{from}
+			</when>
+			<otherwise>
+				${@com.kafutong.wuhankft.GlobalString@start}
+			</otherwise>
+		</choose>
+		<choose>
+			<when test="count != null and count != ''">
+				,#{count}
+			</when>
+			<otherwise>
+				,${@com.kafutong.wuhankft.GlobalString@count}
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="getTopicsOfOrder" parameterType="Topic" resultType="Topic">
+		select id, topic_type, topic, topic_content, topic_imgpath, topic_date, topic_click, topic_url
+		from kft_infos
+		order by topic_click desc
+		limit 0
+		<choose>
+			<when test="count != null and count != ''">
+				,#{count}
+			</when>
+			<otherwise>
+				,15
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="getTopicbyUrl" parameterType="java.lang.String" resultType="Topic">
+		select id, topic_type, topic, topic_content, topic_imgpath, topic_date, topic_click, topic_url, topic_text
+		from kft_infos where topic_url = #{value}
+	</select>
+	
+	<select id="countTopicsByType" parameterType="Topic" resultType="java.lang.Integer">
+		select count(id) from kft_infos
+		<where>
+			<if test="topic_type != null and topic_type != ''">and topic_type = #{topic_type}</if>
+		</where>
+	</select>
+	
+</mapper>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/base.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<title>提示</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+
+<div class="phone_shade phone_shade_hide hidden-sm hidden-md hidden-lg">
+</div>
+
+<div class="container error_main">
+	<div class="panel panel-primary">
+	  <input type="hidden" th:value="${status }" id="status"/>
+	  <div class="panel-heading"><span th:text="${path }"></span> <!-- <span th:text="${status }"></span> --> <span th:text="${error }"></span></div>
+	  <div class="panel-body">
+	  	<div class="404 500 hidden"><img alt="页面走丢了..." src="/images/404.jpg" style="width: 100%;height: 100%;"/></div>
+	  	
+	  </div>
+	</div>
+</div>
+
+<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function() {
+if("404" == $("#status").val()) {
+	$(".error_main .404").removeClass("hidden");
+}else if("500" == $("#status").val()) {
+	$(".error_main .500").removeClass("hidden");
+}
+
+});
+</script>
+</body>
+</html>
