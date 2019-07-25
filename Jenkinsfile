@@ -7,7 +7,9 @@ pipeline {
             }
         }
         stage("build") {
-            sh 'ls -las'
+            steps {
+                sh 'ls -las'
+            }
         }
         /*stage("build") {
             steps {
