@@ -8,7 +8,7 @@ pipeline {
         }
         stage("build") {
             steps {
-                sh 'ls -las'
+                bat 'dir'
             }
         }
         /*stage("build") {
