@@ -11,7 +11,7 @@ pipeline {
             steps {
                 bat 'dir'
                 bat 'mvn -B -DskipTests clean package'
-                bat 'java -jar target/wuhankft-0.0.1-SNAPSHOT.jar'
+                /*bat 'java -jar target/wuhankft-0.0.1-SNAPSHOT.jar'*/
             }
         }
         /*windows机上Jenkins将不能执行shell指令*/
